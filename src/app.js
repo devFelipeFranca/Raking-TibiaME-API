@@ -3,11 +3,16 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-const routers = require("./routes/index.routes");
+const {
+  characterInfosRouter,
+  rakingExpRouter,
+} = require("./routes/index.routes");
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/", routers);
+app.use("/infos", characterInfosRouter);
+
+app.use("/rakingExp", rakingExpRouter);
 
 module.exports = app;

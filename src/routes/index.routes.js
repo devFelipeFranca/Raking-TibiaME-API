@@ -1,7 +1,7 @@
-const routers = require("express").Router();
+const characterInfosRouter = require("./characterInfos.routes");
+const rakingExpRouter = require("./rakingExp.routes");
 
-const useController = require("../controllers/index.controllers");
-
-routers.get("/:name&:world", useController.getAll);
-
-module.exports = routers;
+module.exports = {
+  characterInfosRouter,
+  rakingExpRouter,
+};
