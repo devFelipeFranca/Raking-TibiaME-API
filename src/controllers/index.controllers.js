@@ -6,10 +6,7 @@ module.exports = {
     res.send(searchResult);
   },
   getAll: async (req, res) => {
-    const allResults = await findAll();
+    const allResults = await findAll(req);
     res.send(allResults);
-  },
-  getToken: async (req, res) => {
-    res.send({ token: "Bearer blablabla..." });
   },
 };

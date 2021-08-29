@@ -64,7 +64,7 @@ module.exports = {
 
     return reverseType(orderedDays);
   },
-  composeRakingExp: async (data) => {
+  composeRakingExp: async (data, amount = 10) => {
     const DOM = new DOMParser().parseFromString(data, "text/html");
     const rakingList = [];
 
@@ -76,7 +76,7 @@ module.exports = {
         indexWorld = 17,
         indexCurrentExp = 4,
         indexClassType = 15;
-      counter <= 100;
+      counter <= amount;
       counter += 1,
         indexRaking += 12 + counter,
         indexName += 10,

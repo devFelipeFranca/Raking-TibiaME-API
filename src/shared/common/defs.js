@@ -9,7 +9,10 @@ const DAYS = [
   "Saturday",
 ];
 
+const URL = process.env.URL;
+
 module.exports = {
   PORT,
   DAYS,
+  URL,
 };
